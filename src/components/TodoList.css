@@ -9,8 +9,23 @@
     padding: 5%;
 }
 
-.lista{
+.itemList{
     border: solid 3px lightblue ;
     border-radius: 10%;
     box-shadow: 10px 5px 5px red;
+    padding: 0%;
+    width: 100%;
 }
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 720px) {
+    
+    .content{
+        display: flex;
+        flex-direction: row;
+    }
+  }

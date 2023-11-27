@@ -11,7 +11,7 @@ function TodoList() {
 
     const [tasks, setList] = useState(initialTasks)
 
-    const [hasText,setHasText] = useState(false)
+    const [hasText, setHasText] = useState(false)
 
 
     const handleSubmit = (e) => {
@@ -22,6 +22,8 @@ function TodoList() {
 
         // clear imput
         e.target.task.value = ''
+
+        setHasText(false)
 
     }
 
@@ -51,27 +53,27 @@ function TodoList() {
     }
 
     return (
-        <>
+        <section className='content'>
             <section className='controls'>
                 <h1>TodoList</h1>
                 <form className='miForm' onSubmit={handleSubmit}>
                     <label htmlFor='task'>Nombre de la Tarea :  </label>
-                    <input onChange={checkContent} type="text" name="task" id="task" placeholder='todo'/>
-                    <br/>
+                    <input onChange={checkContent} type="text" name="task" id="task" placeholder='todo' />
+                    <br />
                     {hasText && <button type="submit">Añadir</button>}
                 </form>
-                <br/>
+                <br />
                 <button onClick={resetList}>Reiniciar</button>
                 <button onClick={clearList}>Despejar</button>
-                <br/>
+                <br />
             </section>
-            <section className='container'>
+            <section className='itemList'>
                 <ul className='lista'>
-                                <h2>Tareas</h2>
-                                {drawList()}
-                            </ul>
+                    <h2>Tareas</h2>
+                    {drawList()}
+                </ul>
             </section>
-        </>
+        </section>
     )
 }
 
