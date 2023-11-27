@@ -1,0 +1,16 @@
+.miForm{
+    margin: 3%;
+}
+
+.controls{
+    border: solid 3px lightslategray ;
+    border-radius: 10%;
+    box-shadow: 5px 2px 2px lightcoral;
+    padding: 5%;
+}
+
+.lista{
+    border: solid 3px lightblue ;
+    border-radius: 10%;
+    box-shadow: 10px 5px 5px red;
+}
