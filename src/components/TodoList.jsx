@@ -48,7 +48,7 @@ function TodoList() {
         return tasks.map((el, i) => <Item key={uuidv4()} taskName={el.taskName} deleteItem={() => deleteItem(i)} />)
     }
 
-    const checkContent = (e) => {
+    const handleChange = (e) => {
         e.target.value.length > 0 ? setHasText(true) : setHasText(false)
     }
 
@@ -58,7 +58,7 @@ function TodoList() {
                 <h1>TodoList</h1>
                 <form className='miForm' onSubmit={handleSubmit}>
                     <label htmlFor='task'>Nombre de la Tarea :  </label>
-                    <input onChange={checkContent} type="text" name="task" id="task" placeholder='todo' />
+                    <input onChange={handleChange} type="text" name="task" id="task" placeholder='todo' />
                     <br />
                     {hasText && <button type="submit">Añadir</button>}
                 </form>
