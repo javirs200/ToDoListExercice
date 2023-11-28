@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
-import Item from './Item';
-import data from '../assets/data.json'
+import Task from './Task'
+import data from '../../../assets/data.json'
 import { v4 as uuidv4 } from "uuid";
 import './TodoList.css'
 
@@ -45,7 +45,7 @@ function TodoList() {
 
 
     const drawList = () => {
-        return tasks.map((el, i) => <Item key={uuidv4()} taskName={el.taskName} deleteItem={() => deleteItem(i)} />)
+        return tasks.map((el, i) => <Task key={uuidv4()} taskName={el.taskName} deleteItem={() => deleteItem(i)} />)
     }
 
     const handleChange = (e) => {
